@@ -5,6 +5,10 @@ submit.addEventListener("click",()=>{
     const userInput=document.querySelector("input");
     gridSize=userInput.value;
     console.log(gridSize);
+    if(userInput.value>100 || isNaN(userInput.value)){
+        window.alert("Enter a number less than equal to 100");
+        return ;
+    }
     deletegrid();
     creategrid();
 })
